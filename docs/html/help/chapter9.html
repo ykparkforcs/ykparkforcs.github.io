@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html  lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>外部サービスを連動する方法</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="索引" href="../genindex.html" />
+  <link rel="search" title="検索" href="../search.html" />
+  <link rel="prev" title="カスタマイズ" href="chapter8.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../contents.html" class="home-link">
+    
+      <img class="logo" src="../_static/forcs_support.png" alt="doit logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">クイック検索</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="検索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../contents.html#eformsign">eformsign オンラインサポート</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="chapter1.html" class="reference internal ">概要</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter2.html" class="reference internal ">基本情報</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter3.html" class="reference internal ">Web フォームデザイナーの紹介</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter4.html" class="reference internal ">フォームビルダーの紹介</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter5.html" class="reference internal ">テンプレート：Web フォームデザイナー</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter6.html" class="reference internal ">テンプレート：フォームビルダー</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter7.html" class="reference internal ">文書トレイ</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter8.html" class="reference internal ">カスタマイズ</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">外部サービスを連動する方法</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">クラウドストレージの連動方法</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">分析およびレポート</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+    
+    <li>外部サービスを連動する方法</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="chapter8.html"
+       title="前の章へ">← カスタマイズ</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="id1">
+<h1>外部サービスを連動する方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>クラウドストレージの連動方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>クラウドストレージ eformsign
+は、完了文書を外部のクラウドストレージサービスに自動で保存するように設定できます。現在、Dropbox、Google
+Drive、OneDrive、box に対応しています。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">外部のクラウドストレージへの連動は代表管理者のみ設定できます。</p>
+</div>
+<p>1.メニューの <strong>コネクト &gt; クラウドストレージ</strong> に移動します。</p>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../_images/connect_1.png"><img alt="クラウドストレージの画面" src="../_images/connect_1.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">クラウドストレージの画面</span></p>
+</div>
+<p>2.完了文書を保存するクラウドストレージを選択した後、 <strong>アカウント接続</strong>
+ボタンをクリックしてログインします。</p>
+<p>3.ログインすると、 <strong>接続解除</strong>と <strong>保存パスの設定</strong>
+ボタンが表示されます。必要に応じて <strong>保存パスの設定</strong>
+ボタンをクリックして、保存パスを設定します。</p>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../_images/connect_2.png"><img alt="クラウドストレージのアカウント接続と接続解除" src="../_images/connect_2.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">クラウドストレージのアカウント接続と接続解除</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>保存パスの設定ポップアップは、次の通りです。</p>
+<p>デフォルトのパスは、eformsign
+のサブフォルダーとして会社名が入ります。<strong>新しいフォルダー</strong>
+ボタンをクリックして、新しいフォルダーを作成し、保存パスを変更することもできます。</p>
+<p class="last"><a class="reference internal" href="../_images/connect_3.png"><img alt="image1" src="../_images/connect_3.png" style="width: 450px;" /></a></p>
+</div>
+<p>4.テンプレート管理メニューに移動します。</p>
+<p>5.クラウドストレージに保存したい文書のテンプレートをクリックし、
+<strong>テンプレートの設定</strong> メニューに移動します。</p>
+<p>6.<strong>ワークフローの設定</strong> メニューに移動します。</p>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../_images/connect_4.png"><img alt="ワークフロー設定時の完了ステップの設定" src="../_images/connect_4.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">ワークフロー設定時の完了ステップの設定</span></p>
+</div>
+<p>7.<strong>完了</strong> ステップの属性タブで
+<strong>別のクラウドストレージに完了文書を保存する</strong>
+にチェックを入れます。上記のクラウドストレージメニューで設定したクラウドストレージが接続されていることが確認でき、文書が完了すれば、eformsign
+に加えて連動中の外部のクラウドストレージにも自動的に保存されます。</p>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../_images/connect_5.png"><img alt="別のクラウドストレージに完了文書を保存するのチェックボックス" src="../_images/connect_5.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">別のクラウドストレージに完了文書を保存するのチェックボックス</span></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>分析およびレポート<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>分析およびレポート 新しい文書を追加するたびに CSV
+ファイルをダウンロードするのが面倒な場合は、この機能の使用を推奨します。入力データが、Google
+スプレッドシートやOffice 365 の Excel
+文書に自動的に保存されるように設定することができます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last"><strong>分析およびレポート</strong>は <strong>代表管理者</strong> のみ設定できます。</p>
+</div>
+<div class="figure" id="id8">
+<a class="reference internal image-reference" href="../_images/analytic_1.png"><img alt="分析およびレポートの画面" src="../_images/analytic_1.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">分析およびレポートの画面</span></p>
+</div>
+<p>1.メニューの <strong>コネクト &gt; 分析およびレポート</strong> に移動します。</p>
+<p>2.Google スプレッドシートまたは Office 365
+のうち、連動したいサービスを選択し、 <strong>アカウント接続</strong>
+ボタンをクリックしてログインします。</p>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../_images/analytic_2.png"><img alt="分析およびレポートの画面" src="../_images/analytic_2.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">分析およびレポートの画面</span></p>
+</div>
+<p>3.<strong>データの連動管理</strong> ボタンをクリックします。</p>
+<div class="figure" id="id10">
+<a class="reference internal image-reference" href="../_images/analytic_3.png"><img alt="データの連動管理の画面" src="../_images/analytic_3.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">データの連動管理の画面</span></p>
+</div>
+<p>4.中央または右上にある <strong>データ連動の追加</strong> ボタンをクリックします。</p>
+<div class="figure" id="id11">
+<a class="reference internal image-reference" href="../_images/analytic_4.png"><img alt="データの連動管理の画面" src="../_images/analytic_4.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">データの連動管理の画面</span></p>
+</div>
+<p>5.接続名、データ連動シート、データ送信時点、テンプレートを設定し
+<strong>保存</strong> ボタンをクリックします。</p>
+<div class="figure" id="id12">
+<a class="reference internal image-reference" href="../_images/analytic_5.png"><img alt="データの連動管理の画面" src="../_images/analytic_5.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">データの連動管理の画面</span></p>
+</div>
+<div class="figure" id="id13">
+<a class="reference internal image-reference" href="../_images/analytic_6.png"><img alt="データの連動管理の画面" src="../_images/analytic_6.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">データの連動管理の画面</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">データ連動シートについては、Google シートにたとえば、そのシートの URL
+を意味します。</p>
+</div>
+<p>6.<strong>データの連動管理</strong>
+画面に、データが連動されるシートが表示されます。</p>
+<div class="figure" id="id14">
+<a class="reference internal image-reference" href="../_images/analytic_7.png"><img alt="データの連動管理の画面" src="../_images/analytic_7.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">データの連動管理の画面</span></p>
+</div>
+<p>7.連動されたシートに移動すると、データをインポートするカラム（フィールド）が表示されていることが確認できます。</p>
+<div class="figure" id="id15">
+<a class="reference internal image-reference" href="../_images/analytic_8.png"><img alt="データの連動管理の画面" src="../_images/analytic_8.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">データの連動管理の画面</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="chapter8.html"
+       title="前の章へ">← カスタマイズ</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2020, eformsign.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
