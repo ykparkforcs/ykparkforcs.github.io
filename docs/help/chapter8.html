@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html  lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>カスタマイズ</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="索引" href="../genindex.html" />
+  <link rel="search" title="検索" href="../search.html" />
+  <link rel="next" title="外部サービスを連動する方法" href="chapter9.html" />
+  <link rel="prev" title="文書トレイ" href="chapter7.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../contents.html" class="home-link">
+    
+      <img class="logo" src="../_static/forcs_support.png" alt="doit logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">クイック検索</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="検索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../contents.html#eformsign">eformsign オンラインサポート</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="chapter1.html" class="reference internal ">概要</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter2.html" class="reference internal ">基本情報</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter3.html" class="reference internal ">Web フォームデザイナーの紹介</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter4.html" class="reference internal ">フォームビルダーの紹介</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter5.html" class="reference internal ">テンプレート：Web フォームデザイナー</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter6.html" class="reference internal ">テンプレート：フォームビルダー</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter7.html" class="reference internal ">文書トレイ</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">カスタマイズ</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">カスタムフィールド管理 カスタムフィールド管理</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">通知テンプレートの管理</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter9.html" class="reference internal ">外部サービスを連動する方法</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+    
+    <li>カスタマイズ</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="chapter7.html"
+       title="前の章へ">← 文書トレイ</a>
+  </li>
+  <li class="next">
+    <a href="chapter9.html"
+       title="次の章へ">外部サービスを連動する方法 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="id1">
+<h1>カスタマイズ<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>カスタムフィールド管理 カスタムフィールド管理<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>会社管理</strong> <strong>&gt;</strong> <strong>カスタムフィールド管理</strong>
+では、会社、グループ、およびメンバーのフィールドを追加および編集できます。</p>
+<div class="admonition tip">
+<p class="first admonition-title">ちなみに</p>
+<p class="last">文書で頻繁に使用する、会社、グループ、メンバーなどの情報（会社の代表電話番号、住所、代表者名など）をカスタムフィールドに追加した後、
+<strong>テンプレートの設定 &gt; フィールドの設定</strong>
+に移動し、必要な情報が自動的に入力されるように設定できます。</p>
+</div>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../_images/Customfield.PNG"><img alt="会社管理 &gt; カスタムフィールド管理" src="../_images/Customfield.PNG" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">会社管理 &gt; カスタムフィールド管理</span></p>
+</div>
+<dl class="docutils">
+<dt>① カスタムフィールド管理 &gt; 会社</dt>
+<dd>会社の代表管理者、代表管理者の電話番号、法人の印鑑など、会社に関連するフィールドを追加し、値を設定できます。</dd>
+<dt>② カスタムフィールド管理 &gt; グループ</dt>
+<dd>部署名や責任者など、グループに関連するフィールドを追加し、値を設定できます。</dd>
+<dt>③ カスタムフィールド管理 &gt; メンバー</dt>
+<dd>役職、メールアドレス、電話番号など、メンバーに関連するフィールドを追加し、値を設定できます。</dd>
+<dt>④ フィールドの追加</dt>
+<dd>新しいフィールドを追加します。フィールドの追加
+ボタンをクリックすると、ポップアップウィンドウが表示され、カスタムフィールドを追加できます。<strong>フィールド名</strong>
+と <strong>フィールドタイプ</strong>（テキスト/イメージ）、<strong>フィールド値</strong>
+をクリックして、OK
+ボタンをクリックすると、フィールドがリストに追加されます。</dd>
+</dl>
+<div class="figure" id="id5">
+<img alt="会社管理 &gt; カスタムフィールド管理" src="../_images/customfield-addfield.PNG" />
+<p class="caption"><span class="caption-text">会社管理 &gt; カスタムフィールド管理</span></p>
+</div>
+<dl class="docutils">
+<dt>⑤ フィールドリスト</dt>
+<dd><p class="first">フィールドのリストにフィールド名とフィールド値を表示し、フィールド値を削除および編集できます。</p>
+<p class="last">フィールドを削除するには、フィールドリストの左側にあるアイコン
+(<img alt="会社管理 &gt; カスタムフィールド管理" src="../_images/customfield-list-delete.png" />）をクリックします。</p>
+</dd>
+<dt>⑥ フィールドの編集</dt>
+<dd><p class="first">変更したいフィールドを選択し、修正アイコンをクリックすると、カスタムフィールドの修正ポップアップウィンドウが表示され、フィールド名、タイプ、値などを変更できます。</p>
+<p>フィールドの順序は、順序を変更したいフィールドを選択した後、矢印
+(<img alt="image1" src="../_images/customfield-list-order.PNG" />) をクリックして順序を調整できます。</p>
+<div class="last figure" id="id6">
+<a class="reference internal image-reference" href="../_images/customfield-edit.PNG"><img alt="会社管理 &gt; カスタムフィールド管理" src="../_images/customfield-edit.PNG" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">会社管理 &gt; カスタムフィールド管理</span></p>
+</div>
+</dd>
+<dt>⑦ 保存</dt>
+<dd>カスタムフィールドの編集が終了すれば、 <strong>保存</strong>
+ボタンをクリックして、変更内容を保存します。</dd>
+</dl>
+</div>
+<div class="section" id="id3">
+<h2>通知テンプレートの管理<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>通知テンプレートの管理 文書の依頼時に送信されるメールと SMS
+のテンプレートは、会社に合わせてカスタマイズできます。</p>
+<p>通知テンプレートを変更するには、 <strong>会社管理 &gt; 通知テンプレート管理</strong>
+で設定するか、または <strong>テンプレート管理 &gt; テンプレートの設定 &gt;
+通知の設定</strong> で行えます。</p>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../_images/notification-template-manage.png"><img alt="会社管理 &gt; 通知テンプレート管理" src="../_images/notification-template-manage.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">会社管理 &gt; 通知テンプレート管理</span></p>
+</div>
+<p><strong>会社管理 &gt; 通知テンプレート管理</strong> には、基本的なメールとSMS
+テンプレートがあり、基本的なテンプレートの内容などを変更したり、新しい通知テンプレートを追加したりできます。</p>
+<p><strong>基本的なテンプレートの種類（メール/SMS）</strong></p>
+<table border="1" class="docutils" id="id8">
+<caption><span class="caption-text">テンプレートのタイプと状態</span><a class="headerlink" href="#id8" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">タイプ</th>
+<th class="head">状態</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>文書の処理依頼</td>
+<td>決裁の依頼、文書の検討および作成の依
+頼（内部/外部）、文書の返戻による修正の依頼/文
+書の無効化の依頼の受信/文書の無効化の依頼の拒否</td>
+</tr>
+<tr class="row-odd"><td>文書の処理状態</td>
+<td>文書の承認/文書の削除/文書の返戻/文書の検討
+および作成の完了、文書の最終完了（内部/外部）/
+文書の移管の完了/文書の修正/文書の最終完了（PDF
+送信）、文書の無効化</td>
+</tr>
+<tr class="row-even"><td>メンバーの招待</td>
+<td>メンバー招待/メンバー招
+待の承諾/メンバー招待の拒否/メンバー会社の脱退</td>
+</tr>
+<tr class="row-odd"><td>ヘッダー/フッター</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="first admonition-title">ちなみに</p>
+<p class="last">デフォルトのヘッダーは eformsign のロゴです。<strong>会社管理 &gt; 会社情報
+&gt; ブランド</strong>
+で会社のロゴを登録すれば、メールテンプレートに会社のロゴが適用されます。</p>
+</div>
+<p><strong>新しい通知テンプレートを追加する方法</strong></p>
+<p>既存の登録済みメール/SMS
+テンプレートに加えて、新しい通知テンプレートを追加できます。</p>
+<ol class="arabic">
+<li><p class="first">サイドバーのメニューで <strong>会社管理 &gt; 通知テンプレート管理</strong>
+をクリックします。</p>
+</li>
+<li><p class="first"><strong>通知テンプレートの管理</strong> 画面の右上にある
+<strong>通知テンプレートの追加</strong> ボタンをクリックします。</p>
+</li>
+<li><p class="first">目的の <strong>タイプ</strong> を選択し、 <strong>状態</strong>
+を選択します。<strong>（テーブルテンプレートのタイプと状態を参照</strong>）</p>
+<p><a class="reference internal" href="../_images/notification-template-new.PNG"><img alt="image2" src="../_images/notification-template-new.PNG" style="width: 700px;" /></a></p>
+</li>
+<li><p class="first"><strong>チャンネル</strong>（メールまたはSMS）を選択し、
+<strong>通知テンプレートの名前</strong> を入力します。</p>
+</li>
+<li><p class="first"><strong>ヘッター</strong> と <strong>フッター</strong> を選択します。</p>
+</li>
+<li><p class="first">内容を作成します。</p>
+</li>
+<li><p class="first"><strong>保存</strong> ボタンをクリックして、テンプレートとして追加します。</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="chapter7.html"
+       title="前の章へ">← 文書トレイ</a>
+  </li>
+  <li class="next">
+    <a href="chapter9.html"
+       title="次の章へ">外部サービスを連動する方法 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2020, eformsign.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

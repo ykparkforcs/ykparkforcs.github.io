@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html  lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>テンプレート：Web フォームデザイナー</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="索引" href="../genindex.html" />
+  <link rel="search" title="検索" href="../search.html" />
+  <link rel="next" title="テンプレート：フォームビルダー" href="chapter6.html" />
+  <link rel="prev" title="フォームビルダーの紹介" href="chapter4.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../contents.html" class="home-link">
+    
+      <img class="logo" src="../_static/forcs_support.png" alt="doit logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">クイック検索</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="検索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../contents.html#eformsign">eformsign オンラインサポート</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="chapter1.html" class="reference internal ">概要</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter2.html" class="reference internal ">基本情報</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter3.html" class="reference internal ">Web フォームデザイナーの紹介</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter4.html" class="reference internal ">フォームビルダーの紹介</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">テンプレート：Web フォームデザイナー</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id1" class="reference internal">テンプレートの紹介</a></li>
+                
+                  <li class="toctree-l2"><a href="#id4" class="reference internal">テンプレートの設定</a></li>
+                
+                  <li class="toctree-l2"><a href="#id12" class="reference internal">テンプレートの個別操作メニュー</a></li>
+                
+                  <li class="toctree-l2"><a href="#id13" class="reference internal">テンプレートの検索</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter6.html" class="reference internal ">テンプレート：フォームビルダー</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter7.html" class="reference internal ">文書トレイ</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter8.html" class="reference internal ">カスタマイズ</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="chapter9.html" class="reference internal ">外部サービスを連動する方法</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+    
+    <li>テンプレート：Web フォームデザイナー</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="chapter4.html"
+       title="前の章へ">← フォームビルダーの紹介</a>
+  </li>
+  <li class="next">
+    <a href="chapter6.html"
+       title="次の章へ">テンプレート：フォームビルダー →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="web">
+<span id="template-wd"></span><h1>テンプレート：Web フォームデザイナー<a class="headerlink" href="#web" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>テンプレートの紹介<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Web フォームデザイナー テンプレート eformsign で使用する
+<strong>電子文書の書式</strong>
+です。契約書、申込書、同意書などのように従来は紙で書かれていたものを電子書式の形に変換したものをテンプレートと言います。テンプレートは、
+eformsign サービスで直接テンプレートを作成可能な Web
+フォームデザイナーを使用するか、Microsoft Office に Add-in
+されるフォームビルダーを使用して作成およびアップロードすることができます。フォームビルダーを使用したテンプレートの設定および管理する方法については、
+<a class="reference external" href="#template_fb">???</a>をご参照ください。</p>
+<div class="section" id="id2">
+<h3>テンプレートの概要<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>eformsign
+を使用して電子文書を作成して送信するには、まず電子文書を生成できるテンプレートを作成した後、配布する必要があります。</p>
+<p><strong>Web フォームデザイナーでテンプレートを作成する方法</strong></p>
+<p>文書をオンラインで直接アップロードしてテンプレートを作成します。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">テンプレートの詳細な説明については、
+<a class="reference external" href="#webform">???</a>をご参照ください。</p>
+</div>
+<p>既存の文書を PDF ファイルに変換し、Web
+フォームデザイナーにアップロードすることで、テンプレートを簡単に作成できます。</p>
+<ol class="arabic">
+<li><p class="first">作成したい PDF
+ファイルをテンプレートとして直接ドラッグするか、<strong>PCからファイルを選択</strong>
+をクリックしてファイルを選択し、アップロードします。</p>
+<div class="figure" id="id14">
+<a class="reference internal image-reference" href="../_images/template-manage-upload.png"><img alt="[テンプレート管理] &gt; [ファイルのアップロード] (1)" src="../_images/template-manage-upload.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">[テンプレート管理] &gt; [ファイルのアップロード] (1)</span></p>
+</div>
+<div class="figure" id="id15">
+<a class="reference internal image-reference" href="../_images/template-manage-upload-popup.png"><img alt="[テンプレート管理] &gt; [ファイルのアップロード] (2)" src="../_images/template-manage-upload-popup.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">[テンプレート管理] &gt; [ファイルのアップロード] (2)</span></p>
+</div>
+</li>
+<li><p class="first">コンポーネントのタイプを選択し、アップロードされたファイルにドラッグします。</p>
+<div class="figure" id="id16">
+<a class="reference internal image-reference" href="../_images/web-form-designer1.png"><img alt="コンポーネントをドラッグする方法" src="../_images/web-form-designer1.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">コンポーネントをドラッグする方法</span></p>
+</div>
+</li>
+<li><p class="first">コンポーネントのサイズと位置を調整します。</p>
+</li>
+<li><p class="first">コンポーネントの「プロパティ」で詳細設定を行います。</p>
+</li>
+<li><p class="first"><strong>プレビュー</strong> ボタンをクリックして、文書を表示します。</p>
+</li>
+<li><p class="first">フォームのデザインを終えた後、 <strong>次へ</strong>
+をクリックしてテンプレート設定に移動します。</p>
+</li>
+</ol>
+<p><strong>テンプレートの設定</strong></p>
+<p>作成するテンプレートの詳細設定を行うことができます。</p>
+<ul>
+<li><p class="first"><strong>全般</strong></p>
+<p>テンプレート名、略称、文書タイトル、文書番号などを設定します。</p>
+</li>
+<li><p class="first"><strong>権限の設定</strong></p>
+<p>テンプレートを使って文書を作成できるテンプレートの使用権限、および作成された文書を管理するメンバーまたはグループを指定します。</p>
+</li>
+<li><p class="first"><strong>ワークフローの設定</strong></p>
+<p>文書の作成から完了までのステップをを設定します。</p>
+</li>
+<li><p class="first"><strong>フィールドの設定</strong></p>
+<p>フィールドの基本値、自動入力値などのデフォルト値を設定します。</p>
+</li>
+<li><p class="first"><strong>通知の設定</strong></p>
+<p>テンプレートによって作成される文書を依頼する場合、または、状態の変更がある場合、どのチャンネルで、誰（受信者）に、どうした内容の通知メッセージを送信するかを設定します。</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>ワークフローの概要<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ワークフロー
+ワークフローとは、文書の作成から完了までの依頼と処理のフローを言います。</p>
+<p>ワークフローの設定は、テンプレート管理者がテンプレート別に
+<strong>テンプレートの設定</strong> &gt; <strong>ワークフローの設定</strong> で行えます。</p>
+<p>ワークフローは <strong>開始 - 終了</strong> がデフォルトのステップであり、次のように
+<strong>決裁者、</strong>、<strong>内部受信者</strong>、<strong>外部受信者</strong>
+の3つのタイプのいずれかを追加し、ワークフローを作成することができます。</p>
+<div class="figure" id="id17">
+<img alt="ワークフローのステップ" src="../_images/workflow-step-basic.PNG" />
+<p class="caption"><span class="caption-text">ワークフローのステップ</span></p>
+</div>
+<ul>
+<li><p class="first"><strong>決裁者</strong></p>
+<p>同じ会社のメンバーから文書の決裁を依頼するステップです。</p>
+</li>
+<li><p class="first"><strong>内部受信者</strong></p>
+<p>メンバーに文書の処理を依頼するステップです。</p>
+</li>
+<li><p class="first"><strong>外部受信者</strong></p>
+<p>会社のメンバーではない外部のユーザーに文書の処理を依頼するステップです。</p>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p><strong>決裁者と内部受信者の違い！</strong></p>
+<p>決裁者と内部受信者は両方とも、依頼された文書を承認または返戻できますが、内部受信者として文書処理の依頼を受けたメンバーの場合、文書を検討および作成した後、次のステップの受信者（処理の担当者）を指定することができます。</p>
+<p>つまり、内部受信者ステップの後に、外部受信者、内部受信者、または決裁者を指定できます。</p>
+<p class="last">たとえば、他部署の決裁手順を指定せずに、その文書への協力を別の部署に依頼する場合は、その他部署の担当者を内部受信者ステップとして指定します。他部署の担当者は、その部署の決裁手順を別途設定して文書を処理できます。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>テンプレートの設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アップロードされたファイルで作成するテンプレートの詳細を設定できます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>この作業を行うには、代表管理者の権限またはテンプレートの管理権限が必要です。</p>
+<p class="last">この作業は、PC、モバイル、およびアプリケーションで実行できます。</p>
+</div>
+<div class="section" id="id5">
+<h3>全般<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="figure" id="id18">
+<a class="reference internal image-reference" href="../_images/template-setting-general.png"><img alt="テンプレート設定 &gt; 全般" src="../_images/template-setting-general.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">テンプレート設定 &gt; 全般</span></p>
+</div>
+<dl class="docutils">
+<dt>テンプレートの基本情報の設定</dt>
+<dd>テンプレート名、カテゴリー、有効期限など、テンプレートに関する基本情報を設定します。</dd>
+<dt>① テンプレート名</dt>
+<dd><p class="first"><strong>テンプレート管理</strong>,<strong>文書の新規作成</strong>
+メニュー画面に表示されるテンプレートの名前です。</p>
+<p><strong>テンプレート名</strong>
+は、スペースを含めて約11文字を推奨しています。11文字を超える場合は、名前の上にマウスを置くと、テンプレートの完全な名前を確認することができます。</p>
+<div class="last figure" id="id19">
+<a class="reference internal image-reference" href="../_images/template-name.png"><img alt="テンプレート名" src="../_images/template-name.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">テンプレート名</span></p>
+</div>
+</dd>
+<dt>② テンプレートの略称</dt>
+<dd><p class="first">テンプレートを簡単に表示するための短い名前です。2~3
+文字の簡単な単語で設定してください。</p>
+<p><strong>テンプレートの略称</strong>
+は、文書番号、文書タイトル、通知メールテンプレートなどで <strong>$$</strong>
+を入力して使用することができます。</p>
+<div class="last figure" id="id20">
+<img alt="テンプレートの略称" src="../_images/template-short-name.png" />
+<p class="caption"><span class="caption-text">テンプレートの略称</span></p>
+</div>
+</dd>
+<dt>③ カテゴリ</dt>
+<dd><p class="first">テンプレートをタイプごとに区分するために使用します。カテゴリー名で<strong>テンプレート管理</strong>
+画面のテンプレート、または <strong>文書トレイ</strong>、<strong>文書管理</strong>
+メニューで文書をフィルタリングできます。既存のカテゴリーから選択することも、新しい名前を入力して新しいカテゴリーを作成することもできます。</p>
+<p class="last">区切り文字（ <strong>/</strong>
+）を使用すれば、サブカテゴリーを含むマルチレベルのカテゴリーを設定できます。たとえば、カテゴリーを
+<strong>人事チーム/休暇</strong> で設定すれば、最上位レベルのカテゴリーである
+<strong>人事チーム</strong> 内に第2レベルのサブカテゴリーである <strong>休暇</strong>
+カテゴリーが生成されます。</p>
+</dd>
+<dt>④ 説明</dt>
+<dd>テンプレートに関する追加の説明を入力します。この説明は、テンプレートリストと文書の新規作成リストのテンプレート名の下部に表示されます。</dd>
+<dt>⑤ テンプレート有効期限</dt>
+<dd><p class="first">テンプレートで文書が作成できる期限を設定します。開始日はテンプレートがアップロードされた日付がデフォルトで設定されますが、変更も可能です。</p>
+<p class="last"><strong>期間の制限無し</strong>
+にチェックを入れると、有効期限無しで文書を作成できます。<strong>期間の制限無し</strong>
+のチェックを外した後、日付を設定すると、文書は設定した日付までしか作成できません。</p>
+</dd>
+<dt>文書の設定</dt>
+<dd>テンプレートで作成した文書に対して、文書タイトルの自動生成ルールなどの追加設定を行います。</dd>
+<dt>⑥ 文書タイトルの自動生成ルール</dt>
+<dd><p class="first">テンプレートで文書を作成するときの文書のタイトルを設定します。文書タイトルの生成ルールを設定しない場合、テンプレート名が文書タイトルになります。</p>
+<p class="last">文書タイトルには <strong>$$</strong> と <strong>{{</strong> を使用して予約語を追加できます。</p>
+</dd>
+<dt>⑦ 文書タイトルの変更を許可する</dt>
+<dd><strong>文書のタイトルの変更を許可する</strong> にチェックを入れれば、 <strong>作成</strong>
+ステップの文書の作成者が文書のタイトルを変更できます。</dd>
+<dt>⑧ 文書番号の自動付与</dt>
+<dd><p class="first">テンプレート 文書番号の自動付与
+文書番号の自動付与にチェックを入れると、作成された文書に対して文書番号が自動で付与されます。文書番号の表現式のうち、必要な文書番号の表現式を選択し、文書番号を生成する時期と番号の採番時点を選択します。</p>
+<p class="last"><img alt="image1" src="../_images/template-setting-general-doc-numering.png" /></p>
+</dd>
+<dt>⑨ 文書の送信時に表示されるポップアップ画面を省略する</dt>
+<dd>文書の作成と送信を迅速に行うことの多いケースに使用します。この設定にチェックを入れないと、文書の送信時に
+<strong>確認メッセージを入力する</strong>
+ポップアップウィンドウが表示されます。<strong>文書の送信時に表示されるポップアップ画面を省略する</strong>
+にチェックを入れれば、 <strong>メッセージを入力する</strong>
+ポップアップウィンドウが表示されずに、次のステップに進みます。</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h3>全般 &gt; 文書タイトルの自動生成ルールの作成<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>テンプレートの設定</strong>
+では、テンプレートで生成される文書のタイトルルールを設定できます。
+テンプレート 文書タイトルの自動生成ルール</p>
+<p>文書に関する情報を自動的に文書タイトルに自動で入力されるように設定することができます。文書タイトルの自動生成ルールを設定すると、文書の作成時の情報に基づいて文書タイトルが生成されます。この文書タイトルは、すべての文書トレイ（進行中、要処理、完了文書）と
+文書管理メニューの文書リストで確認できます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">この作業は <strong>代表管理者</strong> または <strong>テンプレート管理</strong>
+の権限が必要です。</p>
+</div>
+<div class="figure" id="id21">
+<a class="reference internal image-reference" href="../_images/document-list.png"><img alt="文書管理 &gt; 文書リスト" src="../_images/document-list.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">文書管理 &gt; 文書リスト</span></p>
+</div>
+<p><strong>文書タイトルの自動生成ルールを設定する方法</strong></p>
+<div class="figure" id="id22">
+<a class="reference internal image-reference" href="../_images/template-setting-general-doc-numering_rule.png"><img alt="テンプレート設定 &gt; 文書タイトルの自動生成ルールの設定" src="../_images/template-setting-general-doc-numering_rule.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">テンプレート設定 &gt; 文書タイトルの自動生成ルールの設定</span></p>
+</div>
+<ol class="arabic simple">
+<li>サイドバーのメニューで <strong>テンプレート管理</strong> に移動します。</li>
+<li>テンプレートの <strong>設定</strong> アイコン (<img alt="image2" src="../_images/config-icon.PNG" />) をクリックして
+<strong>テンプレートの設定</strong> メニューに移動します。</li>
+<li><strong>全般</strong> 画面上の <strong>文書タイトルの自動生成ルール</strong>
+の入力欄に、目的のタイトルルールを入力します。</li>
+<li>右上の <strong>保存</strong> ボタンをクリックして、変更内容を保存します。</li>
+</ol>
+<p><strong>予約語を使用する方法 テンプレート 予約語</strong></p>
+<div class="figure" id="id23">
+<img alt="予約語を使用して文書タイトルの自動生成ルールの設定" src="../_images/template-setting-general-doc-numering_rule_reserved.png" />
+<p class="caption"><span class="caption-text">予約語を使用して文書タイトルの自動生成ルールの設定</span></p>
+</div>
+<dl class="docutils">
+<dt><strong>{{</strong></dt>
+<dd><p class="first">文書に入力した内容を文書タイトルに追加したい場合には、</p>
+<p class="last"><strong>文書タイトルの自動生成ルール</strong> の入力欄に <strong>{{</strong>
+を入力すると、テンプレートのコンポーネント ID
+のリストが表示され、目的の ID
+を選択すると、そのコンポーネントに入力される内容が文書タイトルに追加されます。</p>
+</dd>
+<dt><strong>$$</strong></dt>
+<dd><p class="first">文書に関連する情報をタイトルに追加したい場合には、</p>
+<p><strong>文書タイトルの自動生成ルール</strong> の入力欄に
+<strong>$$</strong>を入力すると、ドロップダウンメニューが表示され、以下の情報から目的の情報を選択できます。</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">情報タイプ</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>現在日付</td>
+<td>文書を作成した時点の日付（例：2020年02月20日)</td>
+</tr>
+<tr class="row-odd"><td>現在時刻</td>
+<td>文書を作成した時点の時刻（例：午後02:59)</td>
+</tr>
+<tr class="row-even"><td>現在日付時刻</td>
+<td>文書を作成した時
+点の日付と時刻（例：2020年2月20日午後02：59）</td>
+</tr>
+<tr class="row-odd"><td>最初作成者ID</td>
+<td>文書を作成したメンバーの ID</td>
+</tr>
+<tr class="row-even"><td>最初作成者名</td>
+<td>文書を作成したメンバーの名前</td>
+</tr>
+<tr class="row-odd"><td>最初作成者部門</td>
+<td>文書を作成したメンバーの部署</td>
+</tr>
+<tr class="row-even"><td>最初作成者会社名</td>
+<td>文書を作成したメンバーの会社名</td>
+</tr>
+<tr class="row-odd"><td>テンプレート名</td>
+<td>テンプレートの設定 &gt; 全般
+で入力したテンプレート名</td>
+</tr>
+<tr class="row-even"><td>テンプレート略称</td>
+<td>テンプレートの設定 &gt; 全般
+で入力したテンプレートの略称</td>
+</tr>
+<tr class="row-odd"><td>会社名</td>
+<td>会社管理 &gt; 会社情報に入力されている会社名</td>
+</tr>
+<tr class="row-even"><td>会社住所</td>
+<td>会社管理 &gt; 会社情報に入力されている住所</td>
+</tr>
+<tr class="row-odd"><td>会社連絡先</td>
+<td>会社管理 &gt; 会社情報に入力されている連絡先</td>
+</tr>
+<tr class="row-even"><td>会社事業者登録番号</td>
+<td>会社管理 &gt;
+会社情報に入力されている事業者登録番号</td>
+</tr>
+<tr class="row-odd"><td>会社ホームページ</td>
+<td>会社管理 &gt;
+会社情報に入力されているホームページのURL</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">ちなみに</p>
+<p><strong>文書のタイトルの変更を許可する</strong>
+にチェックが入っているかどうかを確認してください！</p>
+<p class="last">文書タイトルの自動生成ルールを設定しておいても、
+<strong>文書のタイトルの変更を許可する</strong>
+にチェックが入っていると、文書の作成者は任意で文書のタイトルを変更できます。文書タイトルの変更を希望しない場合は、
+<strong>文書のタイトルの変更を許可する</strong> でチェックを外してください。</p>
+</div>
+<div class="figure" id="id24">
+<img alt="文書タイトルの変更を許可するを確認" src="../_images/template-setting-general-doc-numering_rule_allow_change.png" />
+<p class="caption"><span class="caption-text">文書タイトルの変更を許可するを確認</span></p>
+</div>
+</div>
+<div class="section" id="docnumber-wd">
+<span id="id7"></span><h3>テンプレートの設定 &gt; 全般 &gt; 文書番号の自動付与<a class="headerlink" href="#docnumber-wd" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>eformsign
+で生成される文書に連続する文書番号を付与することができます。テンプレートごとに文書番号を自動的に生成するかどうかを設定できます。文書番号を自動的に生成するためには、4つの文書番号の形式のいずれかを選択する必要があります。文書番号は、文書コンポーネントを使用して文書内に入力できます。また、文書リストに別のカラムがあり、文書番号で文書を検索することもできます。</p>
+<p><strong>文書番号を生成する方法 テンプレート 文書番号の自動付与</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">この作業は <strong>代表管理者</strong> または <strong>テンプレート管理</strong>
+の権限が必要です。</p>
+</div>
+<div class="figure" id="id25">
+<a class="reference internal image-reference" href="../_images/template-setting-general-doc-numering1.png"><img alt="文書番号の設定" src="../_images/template-setting-general-doc-numering1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">文書番号の設定</span></p>
+</div>
+<ol class="arabic">
+<li><p class="first">サイドバーのメニューで <strong>テンプレート管理</strong> に移動します。</p>
+</li>
+<li><p class="first">テンプレートの <strong>設定</strong> アイコン（<img alt="image3" src="../_images/config-icon.PNG" />）をクリックして
+<strong>テンプレートの設定</strong> メニューに移動します。</p>
+</li>
+<li><p class="first"><strong>全般</strong> 画面上の <strong>文書番号の自動付与</strong> にチェックを入れます。</p>
+<ul class="simple">
+<li><strong>文書番号の生成ルールの選択</strong></li>
+</ul>
+<div class="figure" id="id26">
+<img alt="文書番号の生成ルールの選択" src="../_images/template-setting-general-doc-numering1_1.png" />
+<p class="caption"><span class="caption-text">文書番号の生成ルールの選択</span></p>
+</div>
+<dl class="docutils">
+<dt><strong>▪ シリアル番号</strong></dt>
+<dd><p class="first">文書の作成順に1番から生成します。</p>
+<p class="last">例）1、2、3...</p>
+</dd>
+<dt><strong>▪ 年度_シリアル番号</strong></dt>
+<dd><p class="first">文書が作成された年度+1番から生成します。</p>
+<p class="last">例）2020_1、2020_2...</p>
+</dd>
+<dt><strong>▪ テンプレート略称シリアル番号</strong></dt>
+<dd><p class="first">テンプレート略称 + 1番から生成します。</p>
+<p class="last">例）申込書1、申込書2...</p>
+</dd>
+<dt><strong>▪ テンプレート略称年度_シリアル番号</strong></dt>
+<dd><p class="first">テンプレートの略称+文書が作成された年度+1番から生成します。</p>
+<p class="last">例）申込書2020_1、申込書2020_2...</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><strong>文書に番号を付与する時点の選択</strong></li>
+</ul>
+<dl class="docutils">
+<dt>▪ <strong>開始</strong></dt>
+<dd><p class="first last">文書の作成を開始するときに、文書番号を生成します。</p>
+</dd>
+<dt>▪ <strong>完了</strong></dt>
+<dd><p class="first last">文書がすべてのワークフローを経て完了すると、文書番号を生成します。</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">右上の <strong>保存</strong> ボタンをクリックして設定を保存します。</p>
+</li>
+</ol>
+<p><strong>文書番号を確認する方法</strong></p>
+<p>生成された文書番号は、文書コンポーネントを使用して文書内に入力することができるほか、文書リストでも確認できます。</p>
+<ul>
+<li><p class="first"><strong>文書内に文書番号を表示する</strong></p>
+<p>文書番号は、文書コンポーネントを使用して文書内に入力できます。</p>
+<ol class="arabic">
+<li><p class="first">Web フォームデザイナーで PDF ファイルをアップロードします。</p>
+</li>
+<li><p class="first">文書番号を入れたい箇所に文書コンポーネントを追加します。</p>
+<p><a class="reference internal" href="../_images/web-form-designer-document-component.png"><img alt="image4" src="../_images/web-form-designer-document-component.png" style="width: 730px;" /></a></p>
+</li>
+<li><p class="first"><strong>次へ</strong> ボタンをクリックして <strong>テンプレートの設定</strong>
+に移動します。</p>
+</li>
+<li><p class="first"><strong>テンプレート設定 &gt; 全般</strong>で<strong>文書番号の自動付与</strong>
+にチェックを入れます。</p>
+</li>
+<li><p class="first">文書番号の生成ルールを選択します。</p>
+</li>
+<li><p class="first"><strong>保存</strong> ボタンをクリックして設定を保存します。</p>
+</li>
+</ol>
+</li>
+<li><p class="first"><strong>文書リストで文書番号を確認する</strong></p>
+<div class="figure" id="id27">
+<a class="reference internal image-reference" href="../_images/doc-list-docnumber1.PNG"><img alt="完了文書-文書リスト" src="../_images/doc-list-docnumber1.PNG" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">完了文書-文書リスト</span></p>
+</div>
+<div class="figure" id="id28">
+<a class="reference internal image-reference" href="../_images/doc-list-docnumber2.png"><img alt="完了文書-文書リスト-文書番号の確認" src="../_images/doc-list-docnumber2.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">完了文書-文書リスト-文書番号の確認</span></p>
+</div>
+<p>文書番号は、文書リストを表示する文書トレイ（進行中文書、要処理文書、完了文書）と
+文書管理 メニュー（文書の管理権限が必要）で確認できます。</p>
+<ol class="arabic">
+<li><p class="first">サイドバーのメニューで <strong>文書トレイ</strong> または<strong>文書管理</strong>
+メニューに移動します。</p>
+</li>
+<li><p class="first">右上の <strong>カラム設定</strong> アイコンをクリックします。</p>
+</li>
+<li><p class="first">カラムリストの <strong>文書番号</strong> にチェックを入れます。</p>
+<p><img alt="image5" src="../_images/columnlist-docnum.png" /></p>
+</li>
+<li><p class="first">文書リストに <strong>文書番号</strong>
+カラムが追加されていることが確認できます。</p>
+</li>
+</ol>
+</li>
+<li><p class="first"><strong>文書番号で文書を検索する</strong></p>
+<p><a class="reference internal" href="../_images/doc-number-search.png"><img alt="image6" src="../_images/doc-number-search.png" style="width: 600px;" /></a></p>
+<p>文書番号の検索は、詳細検索機能で確認できます。</p>
+<ol class="arabic simple">
+<li><strong>文書トレイ</strong> または <strong>文書管理</strong> メニューに移動します。</li>
+<li>文書リストの上部に <strong>詳細</strong> ボタンをクリックします。</li>
+<li>検索条件の中から <strong>文書番号</strong> を選択します。</li>
+<li>検索したい単語または数字を入力します。</li>
+<li>検索結果を確認します。</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>権限の設定<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>権限の設定
+画面では、テンプレートの使用権限と文書の管理権限を設定できます。</p>
+<div class="figure" id="id29">
+<a class="reference internal image-reference" href="../_images/template-setting-auth-new.PNG"><img alt="テンプレート設定 &gt; 権限の設定" src="../_images/template-setting-auth-new.PNG" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">テンプレート設定 &gt; 権限の設定</span></p>
+</div>
+<p><strong>テンプレートの使用権限</strong></p>
+<p>テンプレートの使用権限
+テンプレートを使用して文書を作成する権限を設定し、会社のすべてのメンバーが使用できるように
+<strong>すべて</strong> を選択するか、または <strong>グループまたはメンバー</strong>
+を検索して選択することができます。</p>
+<p><strong>文書の管理権限</strong></p>
+<p>文書の管理権限
+グループまたはメンバーを選択して、テンプレートを使用して作成された文書を閲覧したり、完了文書の無効化の依頼を承認したりでき、文書を永久削除する権限をすべて、または各々を設定できます。</p>
+<ul class="simple">
+<li><strong>すべての文書を閲覧する (デフォルト権限)：</strong>
+文書管理者の基本権限で、文書管理の権限のあるグループまたはメンバーには、選択に関係なく、すべての文書を閲覧する権限が付与されます。</li>
+<li><strong>完了文書の無効化を承認する (選択時)：</strong>
+文書作成者が完了文書の無効化を依頼した場合に、文書の管理権限で付与された権限があれば、文書の無効化を承認できます。</li>
+<li><strong>文書を永久削除する (選択時)：</strong>
+システムから文書を永久に削除する権限で、文書の管理権限で付与された権限があれば、永久に削除できます。</li>
+</ul>
+<p><a class="reference internal" href="../_images/template-setting-auth-doc-new.PNG"><img alt="image7" src="../_images/template-setting-auth-doc-new.PNG" style="width: 700px;" /></a></p>
+</div>
+<div class="section" id="id9">
+<h3>ワークフローの設定<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>テンプレートの設定</strong> 画面で <strong>ワークフローの設定</strong>
+タブをクリックして、そのテンプレートのワークフローを作成または変更できます。
+ワークフロー</p>
+<div class="figure" id="id30">
+<a class="reference internal image-reference" href="../_images/workflow-setting_new.PNG"><img alt="テンプレートの設定 &gt; ワークフローの設定" src="../_images/workflow-setting_new.PNG" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">テンプレートの設定 &gt; ワークフローの設定</span></p>
+</div>
+<p><strong>ワークフローのステップを追加する方法</strong></p>
+<ol class="arabic">
+<li><p class="first"><strong>ワークフローの設定</strong> タブをクリックして、そのタブに移動します。</p>
+</li>
+<li><p class="first">開始と完了の間にあるステップの追加
+(<img alt="image8" src="../_images/workflow-addstep-plus-button.png" />）ボタンをクリックします。</p>
+</li>
+<li><p class="first"><strong>受信者タイプの選択</strong> で 追加したい <strong>受信者のタイプ</strong>
+を選択します。</p>
+<p><a class="reference internal" href="../_images/workflow-addstep-type2.png"><img alt="image9" src="../_images/workflow-addstep-type2.png" style="width: 700px;" /></a></p>
+</li>
+<li><p class="first">選択すると、ステップがワークフローに追加されます。</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">ちなみに</p>
+<p>ワークフローのステップは個数に関係なく、いくつでも追加できます。ワークフローのステップの横にある矢印をクリックすると、ステップの順序を変更できます。</p>
+<p>ステップを削除するには、ステップの右側に位置する <strong>X</strong>
+をクリックすれば、削除されます。</p>
+<p class="last"><a class="reference internal" href="../_images/workflow-step-added.png"><img alt="image10" src="../_images/workflow-step-added.png" style="width: 700px;" /></a></p>
+</div>
+<p><strong>ワークフローのステップ別の詳細設定</strong></p>
+<p>ステップをクリックすると、ワークフローのステップ別の属性、項目の管理、通知などの詳細を設定できます。</p>
+<ul>
+<li><p class="first"><strong>属性</strong>
+では、ステップ名と状態の設定、およびステップ別の設定を細部設定できます。</p>
+</li>
+<li><p class="first"><strong>項目の管理</strong>
+では、ワークフローの各ステップで受信者が編集できるように許可する
+<strong>編集許可</strong> 項目と必須で入力が必要な <strong>必須入力項目</strong>
+項目を設定できます。</p>
+<p><a class="reference internal" href="../_images/workflow-step-item-manage.png"><img alt="image11" src="../_images/workflow-step-item-manage.png" style="width: 700px;" /></a></p>
+</li>
+</ul>
+<dl class="docutils">
+<dt><strong>開始：文書を作成するステップ ワークフロー 開始</strong></dt>
+<dd><p class="first"><a class="reference internal" href="../_images/workflow-step-start-property.png"><img alt="image12" src="../_images/workflow-step-start-property.png" style="width: 700px;" /></a></p>
+<ul class="last simple">
+<li><strong>ステップ名</strong>（共通）：デフォルトで設定されているステップ名は変更できます。</li>
+<li><strong>文書作成数の制限</strong>：チェックを入れて、そのテンプレートで生成される文書の最大数を設定します。</li>
+<li><strong>URL
+での文書作成を許可する</strong>：メンバーではない外部ユーザーに依頼する場合には、URL
+でアクセスできるパブリックリンクを作成し、ログインせずに文書を処理します。</li>
+<li><strong>文書の重複送信を防止する</strong>：文書を重複して送信することを防止し、フィールドを選択し、そのフィールドに基づいて重複の有無をチェックします。</li>
+</ul>
+</dd>
+<dt><strong>決裁者：社内の決裁者に文書の決裁を依頼するステップ ワークフロー 決裁者</strong></dt>
+<dd><p class="first"><a class="reference internal" href="../_images/workflow-step-approval-property.png"><img alt="image13" src="../_images/workflow-step-approval-property.png" style="width: 700px;" /></a></p>
+<ul class="last">
+<li><p class="first"><strong>表示名</strong>：文書を作成した後、決裁をする際や外部受信者が処理する際に表示される名前を設定します。入力しない場合、デフォルトは以下のように表示されます。</p>
+<p><a class="reference internal" href="../_images/template-approval-property-displayname.png"><img alt="image14" src="../_images/template-approval-property-displayname.png" style="width: 250px;" /></a></p>
+</li>
+</ul>
+</dd>
+<dt><strong>内部受信者 (メンバー)：会社の内部メンバーに文書処理を依頼するステップ ワークフロー 内部受信者 (メンバー)</strong></dt>
+<dd><p class="first"><a class="reference internal" href="../_images/workflow-step-internal-recipient-property.png"><img alt="image15" src="../_images/workflow-step-internal-recipient-property.png" style="width: 700px;" /></a></p>
+<ul class="last simple">
+<li><strong>受信者</strong>：内部受信者のステップを処理するメンバーを設定します。<ul>
+<li><strong>前の作成者または内部受信者</strong>：開始ステップを含めて前のステップの内部受信者が文書を処理するように設定します。ステップを選択できます。</li>
+<li><strong>グループまたはメンバー</strong>：グループまたはメンバーのうち一人が文書を処理するように設定します。グループまたはメンバーには、マルチ選択が可能です。</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt><strong>外部受信者：メンバーではない外部のユーザーに文書処理を依頼するステップ ワークフロー 外部受信者</strong></dt>
+<dd><p class="first"><a class="reference internal" href="../_images/workflow-step-external-recipient-property.png"><img alt="image16" src="../_images/workflow-step-external-recipient-property.png" style="width: 700px;" /></a></p>
+<ul class="last">
+<li><p class="first"><strong>文書の送信期限</strong>：外部受信者に送信される URL
+リンクが、一定期間後に期限切れになるように設定します。</p>
+</li>
+<li><p class="first"><strong>受信者情報の自動設定</strong>：外部受信者に文書を依頼する場合、文書に入力された情報に基づいて、外部受信者の名前と連絡先を自動設定できます。</p>
+</li>
+<li><p class="first"><strong>パスワードの設定</strong>：外部受信者が文書を検討するときに入力する必要のあるパスワード（受信者の名前、送信者が直接入力する、入力フィールドのうち1つを選択して使用するのうち、１つを選択）を設定できます。</p>
+</li>
+<li><p class="first"><strong>パスワードのヒント</strong>：外部受信者が文書を閲覧する際、パスワードを入力する必要のある場合に表示されるヘルプメッセージを設定できます。</p>
+<p><a class="reference internal" href="../_images/workflow-step-external-recipient-property-pw.png"><img alt="image17" src="../_images/workflow-step-external-recipient-property-pw.png" style="width: 400px;" /></a></p>
+</li>
+<li><p class="first"><strong>文書の検討前に携帯番号で本人確認する：</strong>外部受信者が文書を閲覧する前に携帯電話で本人確認を行うように設定します。この機能には追加料金が発生します。</p>
+</li>
+</ul>
+</dd>
+<dt><strong>完了：文書がワークフローのすべてのステップを経て最終的に完了するステップ ワークフロー 完了</strong></dt>
+<dd><p class="first"><a class="reference internal" href="../_images/workflow-step-complete-property.png"><img alt="image18" src="../_images/workflow-step-complete-property.png" style="width: 700px;" /></a></p>
+<ul class="last simple">
+<li><strong>別のクラウドストレージに完了文書を保存する</strong>：外部クラウドストレージに文書を保存するように設定します。外部クラウドストレージは、代表管理者または会社管理の権限を持つメンバーが別途で設定します。</li>
+<li><strong>完了文書にタイムスタンプを付与する</strong>：完了した文書がそれ以降に変更されていないことを証明するタイムスタンプを設定します。この機能には追加料金が発生します。</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id10">
+<h3>フィールドの設定<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>テンプレート フィールドの設定 フィールドの設定</strong>
+では、テンプレート内のコンポーネントフィールドのデフォルト値または自動入力値を設定し、フィールドの順序を並べ替えることができます。</p>
+<div class="figure" id="id31">
+<a class="reference internal image-reference" href="../_images/template-field-setting.png"><img alt="テンプレートの設定 &gt; フィールドの設定" src="../_images/template-field-setting.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">テンプレートの設定 &gt; フィールドの設定</span></p>
+</div>
+<p>カスタムフィールド管理に保存されている会社/グループ/メンバー情報を入力するフィールドのデフォルト値を設定したり、最近の入力値を選択したり、自分で入力したりすることができます。</p>
+<p><strong>自動入力の設定方法</strong></p>
+<p>文書に頻繁に入力する情報を事前に保存し、自動的に入力されるように設定することができます。</p>
+<p>たとえば、名前、連絡先などの作成者の情報、部署名、責任者、会社の代表番号などの会社またはグループに関する情報を事前に保存して自動で入力されるように設定することができます。関連フィールドのコンポーネントの追加しおよびデフォルト値の設定は
+<strong>会社管理 &gt; カスタムフィールド管理</strong> で行えます。</p>
+<ol class="arabic simple">
+<li><strong>カスタムフィールド管理</strong> 画面でフィールドを追加します。</li>
+<li><strong>テンプレート管理</strong> メニューに移動します。</li>
+<li><strong>テンプレートの設定</strong> アイコンをクリックします。</li>
+<li><strong>フィールドの設定</strong> メニューに移動します。</li>
+<li>自動で入力されるように設定するフィールドのデフォルト値を入力します。</li>
+<li>すべての設定が完了したら、<strong>保存</strong> ボタンをクリックします。</li>
+</ol>
+</div>
+<div class="section" id="id11">
+<h3>通知の設定<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>テンプレート 通知の設定
+テンプレートで生成された文書の状態の通知や依頼を受信するチャンネルの選択、受信者への依頼メッセージの編集ができます。</p>
+<p><strong>通知チャンネルの設定</strong></p>
+<p>内部受信者および外部受信者に送信する通知チャンネルを設定します。<strong>メール</strong>
+または <strong>SMS</strong> のうち1つ、または両方を選択できます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last"><strong>SMS</strong>
+は有料プランを購読中の会社のみ選択でき、選択すれば、追加料金が発生します。</p>
+</div>
+<p>SMS を選択すると、<strong>SMSで送信する</strong> と
+<strong>カカオトークで送信し、失敗時にはSMSで再送信する</strong> が活性化します。</p>
+<ul class="simple">
+<li><strong>SMSで送信する</strong>：受信者に通知メッセージを SMS で送信します。</li>
+<li><strong>カカオトークで送信し、失敗時にはSMSで再送信する</strong>：受信者にカカオトークで通知メッセージを送信し、カカオトークを使用していない受信者には
+SMS で送信します。</li>
+</ul>
+<div class="figure" id="id32">
+<img alt="通知チャンネルの設定" src="../_images/template-setting-notification-channel.png" />
+<p class="caption"><span class="caption-text">通知チャンネルの設定</span></p>
+</div>
+<p><strong>依頼メッセージの編集</strong></p>
+<p>このテンプレートで生成された文書を受信者に依頼するときに、受信者に送信される通知メッセージを確認および編集できます。各通知テンプレートのメッセージは
+<strong>会社管理 &gt; 通知テンプレート管理</strong>
+ページで設定した内容がデフォルトで適用されています。<strong>編集</strong>
+ボタンをクリックして、メッセージを直接編集できます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">SMS テンプレートは、有料プランを購読中の会社のみ編集できます。</p>
+</div>
+<p>各通知テンプレートのメッセージは <strong>会社管理 &gt; 通知テンプレート管理</strong>
+ページで設定した内容がデフォルトで適用されています。<strong>編集</strong>
+ボタンをクリックして、メッセージを直接編集できます。</p>
+<p><img alt="image19" src="../_images/template-setting-notification-edit.png" /></p>
+<p><a class="reference internal" href="../_images/template-setting-notification-edit-email.png"><img alt="image20" src="../_images/template-setting-notification-edit-email.png" style="width: 600px;" /></a></p>
+<ul class="simple">
+<li><strong>文書の検討および作成依頼 &gt;
+内部</strong>：内部受信者に文書の検討および作成を依頼するときに、内部受信者に送信される依頼メッセージを編集できます。</li>
+<li><strong>文書の検討および作成依頼 &gt;
+外部</strong>：外部受信者に文書の検討および作成を依頼したときに、外部受信者に送信する依頼メッセージを編集できます。</li>
+<li><strong>文書決裁の依頼</strong>：決裁者に文書の決裁を依頼するときに、決裁者に送信する依頼メッセージを編集できます。</li>
+<li><strong>文書返戻による修正依頼</strong>：決裁者、内部受信者および外部受信者が文書を返戻する際に、文書の依頼者に送信する依頼通知メッセージを編集できます。</li>
+</ul>
+<p><strong>文書状態についての通知</strong></p>
+<p>テンプレートで生成された文書の進行状態の通知を受信する受信者を設定し、通知メッセージのプレビュー（文書の承認、検討、作成/返戻/無効化/修正の通知）と編集（文書の最終完了の通知）ができます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>文書返戻の通知、文書の無効化の通知、文書の修正の通知は、メールテンプレートのみ提供され、SMS
+は送信されません。</p>
+<p class="last">文書の完了の通知（内部/外部）のSMS
+テンプレートは有料プランを購読中の会社のみが編集できます。</p>
+</div>
+<p><a class="reference internal" href="../_images/template-setting-notification-status.png"><img alt="image21" src="../_images/template-setting-notification-status.png" style="width: 500px;" /></a></p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p><strong>文書の作成者</strong>
+オプションにチェックを入れて、<strong>各ステップの処理者</strong>
+オプションはチェックを外すと、文書を作成した人に文書状態の通知が送信されます。</p>
+<p><strong>文書の作成者</strong>
+オプションはチェックを外して、<strong>各ステップの処理者</strong>
+オプションにチェックを入れると、文書の作成者を除いて現在のステップの前に文書を処理した人々に、文書状態の通知が送信されます。</p>
+<p><strong>文書の作成者</strong>、<strong>各ステップの処理者</strong>
+オプションに両方ともチェックを入れると、文書の作成者と、現在のステップの前に文書を処理した人々の両方に、文書状態の通知が送信されます。</p>
+<p class="last"><strong>文書の作成者</strong>、<strong>各ステップの処理者</strong>
+オプションを両方ともチェックを外すと、そのステップの文書状態の通知は送信されません。</p>
+</div>
+<ul>
+<li><p class="first"><strong>文書の承認</strong>：決裁者が文書を承認すると、文書が承認されたことを知らせる通知が送信されます。</p>
+</li>
+<li><p class="first"><strong>文書の検討および作成</strong>：内部受信者または外部受信者が文書を処理すると、文書が検討および作成されたことを知らせる通知が送信されます。</p>
+</li>
+<li><p class="first"><strong>文書の返戻</strong>：決裁者、内部受信者、または外部受信者が文書を返戻すると、文書が返戻されたことを知らせる通知が送信されます。</p>
+</li>
+<li><p class="first"><strong>文書の無効化の通知</strong>：無効化の依頼のあった文書の無効化が承認された場合、文書が無効化されたことを知らせる通知が送信されます。</p>
+</li>
+<li><p class="first"><strong>文書の修正</strong>：文書の作成者が文書を修正した場合、文書が修正されたことを知らせる通知が送信されます。</p>
+</li>
+<li><p class="first"><strong>文書の完了 &gt;
+内部</strong>：文書が完了すると、文書の作成者、決裁者、および文書の内部受信者に文書が完了したことを知らせる通知が送信されます。</p>
+</li>
+<li><p class="first"><strong>文書の完了 &gt;
+外部</strong>：文書が完了すると、文書が完了したことを知らせる通知が外部受信者に送信されます。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last"><strong>文書の完了 &gt; 外部</strong>の<strong>文書の作成者</strong>
+オプションにチェックが入っていると、メンバーではない外部のユーザーが
+URL
+経由で文書を作成して送信するときに、文書完了の通知を受信するための受信先の情報を提供する必要があり、入力した受信先に状態の通知が送信されます。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>テンプレートの個別操作メニュー<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>テンプレート管理</strong> 画面で、テンプレート名の右側にあるメニューアイコン
+(<img alt="image22" src="../_images/template-hamburgericon.png" />)
+をクリックすると、テンプレート別に設定できるメニューが表示されます。</p>
+<p><a class="reference internal" href="../_images/template-manage-menu.png"><img alt="image23" src="../_images/template-manage-menu.png" style="width: 700px;" /></a></p>
+<ul>
+<li><p class="first"><strong>複製</strong>：テンプレートを複製します。テンプレートのフォームファイルとテンプレートの詳細設定が複製されます。複製した設定を変更して保存できます。</p>
+</li>
+<li><p class="first"><strong>削除</strong>：テンプレートを削除します。テンプレートを削除すると、そのテンプレートでは文書を作成できなくなります。</p>
+</li>
+<li><p class="first"><strong>ファイルをダウンロード</strong>：ファイルをダウンロードをクリックすると、アップロードしたファイルの形式でダウンロードされます。（例：Word、Excel
+ファイルなど）</p>
+</li>
+<li><p class="first"><strong>非活性化</strong>：テンプレートを非活性化すると、他のメンバーの
+<strong>文書の新規作成</strong> ページに表示されなくなります。</p>
+</li>
+<li><p class="first"><strong>所有者を変更</strong>：テンプレートの所有者を変更できます。デフォルトでは、テンプレートの所有者としては、テンプレートを作成した人が自動的に指定されます。後でテンプレートの所有者を別のメンバーに変更できます。テンプレートの所有者は、テンプレートの管理権限を持つメンバーの中から選択できます。</p>
+<p><img alt="image24" src="../_images/template-owner-change.PNG" /></p>
+</li>
+<li><p class="first"><strong>文書管理者の設定：</strong>テンプレートで作成した文書の管理者を設定できます。<strong>テンプレートの設定
+&gt; 権限の設定</strong> と同じです。</p>
+<p><img alt="image25" src="../_images/document-manager-setting.PNG" /></p>
+</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h2>テンプレートの検索<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>テンプレート管理</strong>
+画面では、テンプレートをカテゴリー別に照会、検索ができます。</p>
+<p><a class="reference internal" href="../_images/template-manage-search.png"><img alt="image26" src="../_images/template-manage-search.png" style="width: 700px;" /></a></p>
+<dl class="docutils">
+<dt>① <strong>テンプレートの照会</strong></dt>
+<dd><p class="first">をクリックすると、テンプレートの状態やカテゴリー別にテンプレートを照会できます。<strong>X</strong>
+をクリックして、カテゴリーリストに戻ります。</p>
+<p class="last">テンプレートは、Sample
+カテゴリーに基本テンプレートが保存されます。カテゴリーの作成は
+<strong>テンプレート設定 &gt; 全般</strong> で行えます。</p>
+</dd>
+<dt><strong>② テンプレートの検索</strong></dt>
+<dd>検索したいテンプレートの検索キーワードを入力します。</dd>
+<dt>③ <strong>ソート</strong></dt>
+<dd>テンプレートの並べ替え順序を、テンプレート名またはカテゴリー別に昇順および降順に設定します。</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="chapter4.html"
+       title="前の章へ">← フォームビルダーの紹介</a>
+  </li>
+  <li class="next">
+    <a href="chapter6.html"
+       title="次の章へ">テンプレート：フォームビルダー →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2020, eformsign.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
